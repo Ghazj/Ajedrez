@@ -1,5 +1,5 @@
 package ajedrez;
-
+//Sincronización GIT?
 public abstract class Pieza {
 
 	private String nombre;

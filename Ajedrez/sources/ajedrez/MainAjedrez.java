@@ -32,7 +32,7 @@ for (int i = 0;i<tablero.length;i++) {
 		}
 	
 }
-
+	//Sincronización GIT?
 	}
 
 
