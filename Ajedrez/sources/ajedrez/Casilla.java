@@ -2,7 +2,7 @@ package ajedrez;
 
 import java.util.ArrayList;
 
-public /*abstract*/ class Casilla {
+public abstract class Casilla {
 //Atributos
 	private String color;
 	private boolean ocupada;

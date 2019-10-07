@@ -7,11 +7,12 @@ public class Tablero {
 	
 	public void iniciarTablero() {
 		
+		
+		}
+		
 		public String toString() {
 			return tablero[]
 		}
-		
-		
 	}
 	
 	
