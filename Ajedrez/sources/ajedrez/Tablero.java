@@ -7,9 +7,9 @@ public class Tablero {
 	
 	public void iniciarTablero() {
 		
-	/*	public String toString() {
+		public String toString() {
 			return tablero[]
-		}*/
+		}
 		
 		
 	}
