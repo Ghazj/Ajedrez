@@ -18,6 +18,6 @@ public abstract class Jugador {
 	}
 	
 	
-	//Sincronización GIT?
+	//Sincronización GIT
 	
 }

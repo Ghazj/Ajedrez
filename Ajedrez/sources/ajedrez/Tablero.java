@@ -29,7 +29,7 @@ public class Tablero {
 	
 	}
 	
-	////Sincronización GIT?
+	////Sincronización GIT
 	
 	
 	

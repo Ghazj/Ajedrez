@@ -1,5 +1,5 @@
 package ajedrez;
-//Sincronización GIT?
+//Sincronización GIT
 import java.util.ArrayList;
 
 public abstract class Casilla {
