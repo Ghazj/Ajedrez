@@ -18,6 +18,6 @@ public abstract class Jugador {
 	}
 	
 	
-	
+	//cambio para probar GIT
 	
 }
