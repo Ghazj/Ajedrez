@@ -1,5 +1,5 @@
 package ajedrez;
 
-public class Reina {
+public class Reina extends Pieza{
 
 }

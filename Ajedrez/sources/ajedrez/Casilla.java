@@ -4,20 +4,19 @@ import java.util.ArrayList;
 
 public abstract class Casilla {
 //Atributos
-	private String color;
-	private boolean ocupada;
-	private final ArrayList<Pieza> pieza = new ArrayList<>();
-	private char letra;
-	private int numero;
-	
-	//constructores
+	protected String color;
+	protected boolean ocupada;
+	protected char letra;
+	protected int numero;
+	protected final ArrayList<Pieza> pieza = new ArrayList<>();
+//constructores
 	
 	public Casilla() {
-		
+		pieza.add(new Fantasma());
 	}
 
-	public Casilla(String color, boolean ocupada, char letra, int numero) {
-
+	public Casilla(String color, boolean ocupada,char letra,int numero) {
+		pieza.add(new Fantasma());
 		this.color = color;
 		this.ocupada = ocupada;
 		this.letra = letra;
@@ -56,17 +55,34 @@ public abstract class Casilla {
 		this.numero = numero;
 	}
 
-	
-	
 	public void ocupar(Pieza pieza) {
 		ocupada = true;
-		this.pieza.add(pieza);
+		this.pieza.set(0,pieza);
 		
 	}
 	
 	public void desocupar() {
 		ocupada = false;
-		this.pieza.remove(0);
+		this.pieza.set(0,new Fantasma());
 	}
+	
+	public void Reemplazar(Pieza pieza) {
+		ocupada = true;
+		this.pieza.set(0,pieza);
+	}
+	
+	public String toString() {
+		
+		return "Letra: " + letra + "\n" +
+			   "Número: " + numero + "\n" +
+			   "Color: " + color + "\n" +
+			   "Ocupada: " + ocupada + "\n" +    
+			   "Pieza: " + pieza.get(0).getNombre() + " " +
+			   pieza.get(0).getColor() +
+			   "(" + pieza.get(0).getValor() + ")(" + 
+			   pieza.get(0).isEstado() + ")\n" ;
+	}
+
+	
 	
 }
