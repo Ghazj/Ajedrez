@@ -57,7 +57,8 @@ public class Pieza {
 		this.estado = estado;
 	}
 
-	public void moverse() {
+	public void moverse(char letraActual,int numActual,
+			char newLetra,int newNum){
 		
 	}
 	

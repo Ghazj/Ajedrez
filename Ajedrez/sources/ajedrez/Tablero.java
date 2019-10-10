@@ -5,7 +5,7 @@ import java.util.Arrays;
 // Par = negras Impar = blancas (casillas) (Índice de la matríz)
 public class Tablero {
 
-	private final Casilla tablero[][] = new Casilla[8][8];
+	public final Casilla tablero[][] = new Casilla[8][8];
 
 	public Tablero() {
 		
@@ -87,49 +87,88 @@ public class Tablero {
 		}
 		
 		}
+	
+	public void IniciarPiezas() {
+		iniciarPiezasBlancas();
+		iniciarPiezasNegras();
+	}
 		
 	public void iniciarPiezasBlancas() {
 		//Towers
-		tablero[0][0].ocupar(new Torre());
-		tablero[7][0]
-		
+		tablero[0][0].ocupar(new Torre("Blanca"));
+		tablero[7][0].ocupar(new Torre("Blanca"));
+		//Horses
+		tablero[1][0].ocupar(new Caballo("Blanco"));
+		tablero[6][0].ocupar(new Caballo("Blanco"));
+		//Alfiles
+		tablero[2][0].ocupar(new Alfil("Blanco"));
+		tablero[5][0].ocupar(new Alfil("Blanco"));
+		//Queen
+		tablero[4][0].ocupar(new Reina("Blanca"));
+		//King
+		tablero[3][0].ocupar(new Rey("Blanco"));
+		//Peones
+		for (int i = 0;i<tablero.length;i++) {
+			
+			tablero[i][1].ocupar(new Peon("Blanco"));
+			
+		}
 	}
 	
 	public void iniciarPiezasNegras() {
-		
+		//Towers
+		tablero[0][7].ocupar(new Torre("Negra"));
+		tablero[7][7].ocupar(new Torre("Negra"));
+		//Horses
+		tablero[1][7].ocupar(new Caballo("Negro"));
+		tablero[6][7].ocupar(new Caballo("Negro"));
+		//Alfiles
+		tablero[2][7].ocupar(new Alfil("Negro"));
+		tablero[5][7].ocupar(new Alfil("Negro"));
+		//Queen
+		tablero[3][7].ocupar(new Reina("Negra"));
+		//King
+		tablero[4][7].ocupar(new Rey("Negro"));
+		//Peones
+		for (int i = 0;i<tablero.length;i++) {
+			
+			tablero[i][6].ocupar(new Peon("Negro"));
+			
+		}
 	}
 	
 	public void mostrarTablero() {
-		int contador = 0;
+		System.out.println(tablero.length);
 for (int i = 0;i<tablero.length;i++) {
 			
 			for (int j = 0;j<tablero[i].length;j++) {
 				
-				System.out.print(tablero[i][j]);
-				contador = contador + i + j;
+				System.out.print(tablero[j][i]);
 			}
 			System.out.println("");
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	public void mostrarLindo() {
+		
+		System.out.println(tablero.length);
+		for (int i = 0;i<tablero.length;i++) {
+					
+					for (int j = 0;j<tablero[i].length;j++) {
+						
+						System.out.print(tablero[j][i].getPieza().getNombre() + "||");
+						
+					}
+					System.out.println("");
+				}
+		
+	}
+
 	@Override
 	public String toString() {
 		return "Tablero [tablero=" + Arrays.toString(tablero) + "]";
 	}
 	
 	////Sincronización GIT
-	
-	
-	
-	
-	
-	
 	
 }

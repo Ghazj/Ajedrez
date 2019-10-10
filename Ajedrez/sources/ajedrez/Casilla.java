@@ -54,6 +54,10 @@ public abstract class Casilla {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
+	
+	public Pieza getPieza() {
+		return this.pieza.get(0);
+	}
 
 	public void ocupar(Pieza pieza) {
 		ocupada = true;
